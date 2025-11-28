@@ -4,7 +4,7 @@ title: 홈
 description: 페낭 한인 교회에 오신 것을 환영합니다
 ---
 
-<div style="text-align: center; padding: 3rem 0; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: 1rem; margin-bottom: 3rem;">
+<div style="text-align: center; padding: 3rem 0; background: linear-gradient(135deg, rgba(32, 178, 170, 0.1) 0%, rgba(30, 144, 255, 0.1) 100%); border-radius: 1rem; margin-bottom: 3rem;">
   <h1 style="font-size: 3rem; margin-bottom: 1rem;">페낭 한인 교회에<br>오신 것을 환영합니다</h1>
   <p style="font-size: 1.25rem; color: #4a5568; margin-bottom: 2rem;">말레이시아 페낭에 있는 한인 교회</p>
   <p style="max-width: 700px; margin: 0 auto 2rem; line-height: 1.8; color: #4a5568;">
@@ -12,7 +12,7 @@ description: 페낭 한인 교회에 오신 것을 환영합니다
     우리 교회는 말레이시아 페낭에 거주하는 한인들과 현지인들이 함께 하나님을 예배하고,<br>
     서로를 사랑하며, 지역 사회를 섬기는 교회입니다.
   </p>
-  <a href="{{ '/worship' | relative_url }}" class="btn btn-primary" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s;">예배 시간 확인하기 →</a>
+  <a href="{{ '/worship' | relative_url }}" class="btn btn-primary" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #20B2AA 0%, #1E90FF 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s;">예배 시간 확인하기 →</a>
 </div>
 
 ---
@@ -53,27 +53,27 @@ description: 페낭 한인 교회에 오신 것을 환영합니다
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
   <div class="card" style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <h3 style="margin-top: 0; color: #667eea;">🎉 새해 감사 예배</h3>
+    <h3 style="margin-top: 0; color: #1E90FF;">🎉 새해 감사 예배</h3>
     <p style="color: #718096; font-size: 0.875rem; margin-bottom: 0.5rem;">📅 2025년 1월 1일 주일 오전 11:00</p>
     <p style="color: #4a5568; margin-bottom: 0;">새해를 맞이하여 하나님께 감사하는 특별 예배를 드립니다.</p>
   </div>
 
   <div class="card" style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <h3 style="margin-top: 0; color: #667eea;">📖 성경 공부 모임</h3>
+    <h3 style="margin-top: 0; color: #1E90FF;">📖 성경 공부 모임</h3>
     <p style="color: #718096; font-size: 0.875rem; margin-bottom: 0.5rem;">📅 매주 수요일 오후 7:30</p>
     <p style="color: #4a5568; margin-bottom: 0;">함께 말씀을 나누고 교제하는 시간입니다.</p>
   </div>
 </div>
 
 <div style="text-align: center; margin-top: 2rem;">
-  <a href="{{ '/notices' | relative_url }}" style="color: #667eea; font-weight: 600; text-decoration: none;">더 많은 소식 보기 →</a>
+  <a href="{{ '/notices' | relative_url }}" style="color: #1E90FF; font-weight: 600; text-decoration: none;">더 많은 소식 보기 →</a>
 </div>
 
 ---
 
 ## 💒 우리 교회를 소개합니다
 
-<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); padding: 2rem; border-radius: 1rem; margin-top: 2rem;">
+<div style="background: linear-gradient(135deg, rgba(32, 178, 170, 0.05) 0%, rgba(30, 144, 255, 0.05) 100%); padding: 2rem; border-radius: 1rem; margin-top: 2rem;">
   <p style="font-size: 1.125rem; color: #4a5568; margin-bottom: 2rem;">
     페낭 한인 교회는 말레이시아 페낭에서 복음을 전하고 성도들의 신앙 성장을 돕는 교회입니다.
   </p>
@@ -99,7 +99,7 @@ description: 페낭 한인 교회에 오신 것을 환영합니다
   </div>
 
   <div style="text-align: center; margin-top: 2rem;">
-    <a href="{{ '/about' | relative_url }}" style="color: #667eea; font-weight: 600; text-decoration: none;">자세히 알아보기 →</a>
+    <a href="{{ '/about' | relative_url }}" style="color: #1E90FF; font-weight: 600; text-decoration: none;">자세히 알아보기 →</a>
   </div>
 </div>
 
@@ -137,15 +137,15 @@ description: 페낭 한인 교회에 오신 것을 환영합니다
 
   <div style="text-align: center; margin-top: 2rem;">
     <p style="color: #718096; margin-bottom: 1rem;">관심 있으신 분들은 언제든지 문의해 주세요.</p>
-    <a href="{{ '/contact' | relative_url }}" class="btn btn-primary" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">연락하기 →</a>
+    <a href="{{ '/contact' | relative_url }}" class="btn btn-primary" style="display: inline-block; padding: 0.75rem 2rem; background: linear-gradient(135deg, #20B2AA 0%, #1E90FF 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">연락하기 →</a>
   </div>
 </div>
 
 ---
 
-<div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: 1rem; margin-top: 3rem;">
+<div style="text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(32, 178, 170, 0.1) 0%, rgba(30, 144, 255, 0.1) 100%); border-radius: 1rem; margin-top: 3rem;">
   <blockquote style="border: none; background: transparent; box-shadow: none; font-size: 1.25rem; font-style: italic; color: #4a5568; margin: 0;">
     <p style="margin-bottom: 0.5rem;">"우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라"</p>
-    <strong style="color: #667eea; font-style: normal;">요한일서 4:19</strong>
+    <strong style="color: #1E90FF; font-style: normal;">요한일서 4:19</strong>
   </blockquote>
 </div>
