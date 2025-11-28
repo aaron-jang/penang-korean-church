@@ -9,19 +9,19 @@
    ======================================== */
 
 :root {
-  /* Modern Vibrant Color Palette */
-  --primary: #667eea;
-  --primary-light: #764ba2;
-  --secondary: #f093fb;
-  --accent: #4facfe;
-  --accent-dark: #00f2fe;
+  /* 페낭 한인 교회 추천 팔레트 - 평화로운 하늘색 */
+  --primary: #ADD8E6;
+  --primary-light: #87CEEB;
+  --secondary: #B8E6F5;
+  --accent: #6CB4E8;
+  --accent-dark: #5AA7DB;
 
-  /* Gradient Collections */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  --gradient-card: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-accent: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  --gradient-cool: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  /* Gradient Collections - 하늘색 계열 */
+  --gradient-primary: linear-gradient(135deg, #ADD8E6 0%, #87CEEB 100%);
+  --gradient-hero: linear-gradient(135deg, #B8E6F5 0%, #ADD8E6 50%, #87CEEB 100%);
+  --gradient-card: linear-gradient(135deg, #87CEEB 0%, #6CB4E8 100%);
+  --gradient-accent: linear-gradient(135deg, #ADD8E6 0%, #B8E6F5 100%);
+  --gradient-cool: linear-gradient(135deg, #E3F4FA 0%, #D4EDF7 100%);
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -29,12 +29,13 @@
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
   /* Modern Neutrals */
-  --text-primary: #1a202c;
+  --text-primary: #2C3E50;
   --text-secondary: #4a5568;
   --text-light: #718096;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f7fafc;
-  --bg-dark: #1a202c;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F7FBFD;
+  --bg-dark: #2C3E50;
+  --footer-bg: #EAF6FB;
 
   /* Typography - Bold & Modern */
   --font-display: 'Montserrat', 'Noto Sans KR', sans-serif;
@@ -64,7 +65,7 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
-  --shadow-glow: 0 0 40px rgba(102, 126, 234, 0.4);
+  --shadow-glow: 0 0 40px rgba(173, 216, 230, 0.5);
 
   /* Border Radius */
   --radius-sm: 8px;
@@ -638,11 +639,12 @@ body {
    ======================================== */
 
 .site-footer {
-  background: var(--bg-dark);
-  color: white;
+  background: var(--footer-bg);
+  color: var(--text-primary);
   padding: var(--space-2xl) var(--space-lg);
   margin-top: var(--space-3xl);
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  border-top: 2px solid var(--primary);
 }
 
 .footer-content {
@@ -653,17 +655,18 @@ body {
 
 .footer-content p {
   margin-bottom: var(--space-sm);
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-secondary);
 }
 
 .footer-content a {
-  color: var(--accent);
+  color: var(--accent-dark);
   text-decoration: none;
   transition: all var(--transition-base);
+  font-weight: 600;
 }
 
 .footer-content a:hover {
-  color: var(--accent-dark);
+  color: var(--primary);
 }
 
 /* ========================================
