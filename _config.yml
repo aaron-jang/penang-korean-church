@@ -8,8 +8,8 @@ description: >-
   하나님의 사랑을 나누고 지역 사회를 섬기는 교회입니다.
 
 # GitHub Pages 설정
-baseurl: "" # 서브디렉토리를 사용하는 경우 "/repository-name" 형태로 입력
-url: "" # GitHub Pages URL (예: https://username.github.io)
+baseurl: "/penang-korean-church" # 리포지토리 이름
+url: "https://aaron-jang.github.io" # GitHub Pages URL
 
 # 교회 정보
 church:
