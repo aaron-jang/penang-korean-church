@@ -127,7 +127,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter 제거 - 가독성 개선 */
 }
 
 .header-content {
@@ -209,8 +209,8 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25);
+  /* backdrop-filter 제거하고 배경을 더 진하게 */
 }
 
 /* ========================================
