@@ -1,0 +1,30 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>{{ site.church.name_kr }}</h3>
+                <p>{{ site.church.name_en }}</p>
+                <p>{{ site.church.location }}</p>
+            </div>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="{{ '/about' | relative_url }}">교회 소개</a></li>
+                    <li><a href="{{ '/worship' | relative_url }}">예배 안내</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}">오시는 길</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <p>이메일: {{ site.church.email }}</p>
+                <p>전화: {{ site.church.phone }}</p>
+                <p><a href="{{ site.church.google_map }}" target="_blank" rel="noopener">구글 지도에서 보기</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.church.name_kr }}. All rights reserved.</p>
+            <p class="powered-by">Powered by Jekyll & GitHub Pages</p>
+        </div>
+    </div>
+</footer>

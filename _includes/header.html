@@ -1,0 +1,21 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="site-title">
+                <h1><a href="{{ '/' | relative_url }}">{{ site.church.name_kr }}</a></h1>
+                <p class="site-subtitle">{{ site.church.name_en }}</p>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>홈</a></li>
+                    <li><a href="{{ '/about' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>교회 소개</a></li>
+                    <li><a href="{{ '/worship' | relative_url }}" {% if page.url contains 'worship' %}class="active"{% endif %}>예배 안내</a></li>
+                    <li><a href="{{ '/sermons' | relative_url }}" {% if page.url contains 'sermons' %}class="active"{% endif %}>설교</a></li>
+                    <li><a href="{{ '/notices' | relative_url }}" {% if page.url contains 'notices' %}class="active"{% endif %}>공지사항</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}" {% if page.url contains 'contact' %}class="active"{% endif %}>연락처</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

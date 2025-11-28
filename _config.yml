@@ -1,0 +1,70 @@
+# 페낭 한인 교회 홈페이지 설정
+
+# 사이트 기본 정보
+title: 페낭 한인 교회
+title_en: Penang Korean Church
+description: >-
+  말레이시아 페낭에 위치한 한인 교회입니다.
+  하나님의 사랑을 나누고 지역 사회를 섬기는 교회입니다.
+
+# GitHub Pages 설정
+baseurl: "" # 서브디렉토리를 사용하는 경우 "/repository-name" 형태로 입력
+url: "" # GitHub Pages URL (예: https://username.github.io)
+
+# 교회 정보
+church:
+  name_kr: 페낭 한인 교회
+  name_en: Penang Korean Church
+  location: 말레이시아 페낭
+  google_map: https://maps.app.goo.gl/BpnP3XKAeFnSCwek9
+  email: contact@example.com # 실제 이메일로 변경하세요
+  phone: "+60-XX-XXXX-XXXX" # 실제 전화번호로 변경하세요
+
+# Jekyll 설정
+markdown: kramdown
+theme: minima
+permalink: /:categories/:year/:month/:day/:title/
+
+# 플러그인 (GitHub Pages에서 지원하는 플러그인만 사용)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 제외할 파일/폴더
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+
+# 컬렉션 설정 (설교, 공지사항)
+collections:
+  sermons:
+    output: true
+    permalink: /sermons/:year/:month/:day/:title/
+  notices:
+    output: true
+    permalink: /notices/:year/:month/:day/:title/
+
+# 기본값
+defaults:
+  - scope:
+      path: ""
+      type: "sermons"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "notices"
+    values:
+      layout: "default"
+
+# 타임존
+timezone: Asia/Kuala_Lumpur
+
+# 언어
+lang: ko
