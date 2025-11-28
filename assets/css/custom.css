@@ -16,29 +16,39 @@
   --footer-bg: #EAF6FB;
 
   /* 추가 색상 */
-  --border-color: #E0E0E0;
+  --border-color: #E8EEF2;
   --hover-color: #6CB4E8;
-  --light-bg: #F9FAFB;
+  --light-bg: #F7FAFC;
 
   /* 타이포그래피 */
   --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-size-base: 16px;
-  --line-height: 1.6;
+  --line-height: 1.7;
 
-  /* 간격 */
+  /* 간격 - 더 여유롭게 */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 3.5rem;
+  --spacing-2xl: 5rem;
 
-  /* Border Radius */
-  --radius: 8px;
+  /* Border Radius - 더 부드럽게 */
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 16px;
 
-  /* Shadows */
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+  /* Shadows - 더 자연스럽게 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========================================
@@ -73,6 +83,13 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.site-header:hover {
   box-shadow: var(--shadow);
 }
 
@@ -149,6 +166,19 @@ body {
   text-align: center;
   padding: var(--spacing-2xl) var(--spacing-lg);
   margin: 0 0 var(--spacing-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .hero-title {
@@ -156,12 +186,14 @@ body {
   font-weight: 700;
   margin-bottom: var(--spacing-md);
   line-height: 1.2;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: var(--spacing-sm);
   opacity: 0.95;
+  animation: fadeInUp 0.6s ease-out 0.1s backwards;
 }
 
 .hero-description {
@@ -170,6 +202,18 @@ body {
   margin: 0 auto var(--spacing-lg);
   opacity: 0.9;
   line-height: 1.7;
+  animation: fadeInUp 0.6s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ========================================
@@ -206,26 +250,44 @@ a:hover {
 
 .btn {
   display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-xl);
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: var(--radius);
-  transition: all 0.3s ease;
+  transition: all var(--transition);
   border: none;
   cursor: pointer;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn-primary {
   background: white;
   color: var(--text-color);
+  box-shadow: var(--shadow);
 }
 
 .btn-primary:hover {
   background: var(--light-bg);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .text-link {
@@ -248,27 +310,53 @@ a:hover {
   border-radius: var(--radius);
   padding: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
+  margin: var(--spacing-xl) 0;
 }
 
 .info-card {
   background: white;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.info-card:hover::before {
+  transform: scaleX(1);
 }
 
 .info-card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
 }
 
 .info-card-icon {
@@ -303,12 +391,32 @@ a:hover {
   background: white;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: var(--spacing-lg);
-  transition: all 0.3s ease;
+  padding: var(--spacing-xl);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.news-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.news-card:hover::after {
+  transform: scaleX(1);
 }
 
 .news-card:hover {
   box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
   border-color: var(--primary-color);
 }
 
@@ -378,10 +486,24 @@ a:hover {
 
 .quote-box {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   padding: var(--spacing-2xl) var(--spacing-xl);
   margin: var(--spacing-2xl) 0;
   text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-box::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 120px;
+  font-family: Georgia, serif;
+  color: rgba(255, 255, 255, 0.1);
+  line-height: 1;
 }
 
 .quote-text p {
