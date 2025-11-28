@@ -5,14 +5,26 @@ description: 페낭 한인 교회에 오신 것을 환영합니다
 ---
 
 <div class="hero-section">
-  <h1 class="hero-title">페낭 한인 교회에<br>오신 것을 환영합니다</h1>
-  <p class="hero-subtitle">말레이시아 페낭에 있는 한인 교회</p>
-  <p class="hero-description">
-    하나님의 사랑과 은혜가 가득한 페낭 한인 교회에 오신 것을 진심으로 환영합니다.<br>
-    우리 교회는 말레이시아 페낭에 거주하는 한인들과 현지인들이 함께 하나님을 예배하고,<br>
-    서로를 사랑하며, 지역 사회를 섬기는 교회입니다.
-  </p>
-  <a href="{{ '/worship' | relative_url }}" class="btn btn-primary">예배 시간 확인하기 →</a>
+  <div style="max-width: 900px; margin: 0 auto;">
+    <h1 class="hero-title">페낭 한인 교회에<br>오신 것을 환영합니다</h1>
+    <p class="hero-subtitle">말레이시아 페낭에 있는 한인 교회</p>
+    <p class="hero-description">
+      하나님의 사랑과 은혜가 가득한 페낭 한인 교회에 오신 것을 진심으로 환영합니다.<br>
+      우리 교회는 말레이시아 페낭에 거주하는 한인들과 현지인들이 함께 하나님을 예배하고,<br>
+      서로를 사랑하며, 지역 사회를 섬기는 교회입니다.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+      <a href="{{ '/worship' | relative_url }}" class="btn btn-primary">예배 시간</a>
+      <a href="{{ '/about' | relative_url }}" class="btn btn-outline">교회 소개</a>
+      <a href="{{ '/contact' | relative_url }}" class="btn btn-outline">연락하기</a>
+    </div>
+    <div class="social-icons">
+      <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+      <a href="#" class="social-icon" aria-label="YouTube">📺</a>
+      <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+      <a href="https://maps.app.goo.gl/BpnP3XKAeFnSCwek9" target="_blank" class="social-icon" aria-label="Location">📍</a>
+    </div>
+  </div>
 </div>
 
 ---
